@@ -15,14 +15,18 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ,LED_DMA,LED_INVERT,LED
 strip.begin()
 
 while True:
-    for x in range(0,18):
+    for x in range(0,9):
         strip.setPixelColor(x,Color(245,40,0))
         strip.setPixelColor(x+18,Color(245,40,0))
+        strip.setPixelColor(17-x,Color(245,40,0))
+        strip.setPixelColor(35-x,Color(245,40,0))
         strip.show()
         print(x)
         time.sleep(0.3)
-        rip.setPixelColor(x,Color(0,0,0))
+        strip.setPixelColor(x,Color(0,0,0))
         strip.setPixelColor(x+18,Color(0,0,0))
+        strip.setPixelColor(17-x,Color(0,0,0))
+        strip.setPixelColor(35-x,Color(0,0,0))
         strip.show()
         #time.sleep(1)
 
